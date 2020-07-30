@@ -51,7 +51,7 @@ export class BorderComponent implements OnInit,AfterViewInit  {
 
   }
   bordreRadious="";
-  Thickness="2";
+  Thickness="4";
   borderResult="";
   brMode="solid";
   color="red";

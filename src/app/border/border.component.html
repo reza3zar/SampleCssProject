@@ -1,6 +1,10 @@
  
  <div   > 
-        <form class="form"       #form   >
+        <form class="form"        >
+
+                <label >1.border In General</label>
+
+     
             <label  >Choose a border-style:</label>
             <select   (change)="onChange($event.target.value)">
               <option value="none">none</option>
@@ -20,8 +24,9 @@
             <h1 [ngStyle]="{'border-style': brStyle}">This is a Sample Head</h1>
 
 
+            <label >2.Mix</label>
 
-            <label>Mix -->top ,left,bottom,right</label>
+           
 
             <label  >Choose a border-style top:</label>
             <select   (change)="onChangeTop($event.target.value)">
@@ -88,7 +93,7 @@
 
             <h1 [ngStyle]="{'border-style': mixParse}">This is Mix Sample</h1>
 
-            <label >Border radious</label>
+            <label >3.Border radious</label>
             <br>
             <label >Thickness</label>
             <input type="text" name="Thickness" (input)="onChangeThickness()"  [(ngModel)]="Thickness" >
@@ -121,6 +126,21 @@
 
 
             <h1 [ngStyle]="{'border': borderResult,'border-radius':borderRadious +'px'}">This is a sample of Border-radious</h1>
+
+            <label >4.Shorthand Border</label>
+
+            <h1 [ngStyle]="{'border': borderResult}">This is a sample of Border Full</h1>
+
+            <h1 [ngStyle]="{'border-right': borderResult}">This is a sample of Border-right</h1>
+
+            <h1 [ngStyle]="{'border-top': borderResult}">This is a sample of Border-top</h1>
+
+            <h1 [ngStyle]="{'border-left': borderResult}">This is a sample of Border-left</h1>
+
+            <h1 [ngStyle]="{'border-bottom': borderResult}">This is a sample of Border-bottom</h1>
+
+
+
 
 </form>
 </div>       
