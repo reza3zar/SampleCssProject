@@ -1,0 +1,90 @@
+ 
+ <div   > 
+        <form class="form"       #form   >
+            <label  >Choose a border-style:</label>
+            <select   (change)="onChange($event.target.value)">
+              <option value="none">none</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="solid">solid</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="inset">inset</option>
+              <option value="outset">outset</option>
+              <option value="hidden">hidden</option>
+
+            </select>
+
+
+            <h1 [ngStyle]="{'border-style': brStyle}">This is a Sample Head</h1>
+
+
+
+            <label>Mix -->top ,left,bottom,right</label>
+
+            <label  >Choose a border-style top:</label>
+            <select   (change)="onChangeTop($event.target.value)">
+              <option value="none">none</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="solid">solid</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="inset">inset</option>
+              <option value="outset">outset</option>
+              <option value="hidden">hidden</option>
+
+            </select>
+
+            <label  >Choose a border-style left:</label>
+            <select   (change)="onChangeLeft($event.target.value)">
+              <option value="none">none</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="solid">solid</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="inset">inset</option>
+              <option value="outset">outset</option>
+              <option value="hidden">hidden</option>
+
+            </select>
+
+
+            <label  >Choose a border-style bottom:</label>
+            <select   (change)="onChangeBottom($event.target.value)">
+              <option value="none">none</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="solid">solid</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="inset">inset</option>
+              <option value="outset">outset</option>
+              <option value="hidden">hidden</option>
+
+            </select>
+
+
+            <label  >Choose a border-style right:</label>
+            <select   (change)="onChangeRight($event.target.value)">
+              <option value="none">none</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="solid">solid</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="inset">inset</option>
+              <option value="outset">outset</option>
+              <option value="hidden">hidden</option>
+
+            </select>
+
+            <h1 [ngStyle]="{'border-style': mixParse}">This is Mix Sample</h1>
+</form>
+</div>       

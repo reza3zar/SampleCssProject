@@ -13,6 +13,7 @@ import { FontStyleComponent } from './font-style/font-style.component';
 import { HoverStyleComponent } from './hover-style/hover-style.component';
 import { ListStyleComponent } from './list-style/list-style.component';
 import { MarginAndPadingComponent } from './margin-and-pading/margin-and-pading.component';
+import { BorderComponent } from './border/border.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MarginAndPadingComponent } from './margin-and-pading/margin-and-pading.
     FontStyleComponent,
     HoverStyleComponent,
     ListStyleComponent,
-    MarginAndPadingComponent
+    MarginAndPadingComponent,
+    BorderComponent
   ],
   imports: [
     BrowserModule,

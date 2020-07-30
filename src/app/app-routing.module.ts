@@ -7,6 +7,7 @@ import { FontStyleComponent } from './font-style/font-style.component';
 import { HoverStyleComponent } from './hover-style/hover-style.component';
 import { ListStyleComponent } from './list-style/list-style.component';
 import { MarginAndPadingComponent } from './margin-and-pading/margin-and-pading.component';
+import { BorderComponent } from './border/border.component';
 
 
 const routes: Routes = [  
@@ -17,6 +18,8 @@ const routes: Routes = [
   {path:'Hover',component:HoverStyleComponent},
   {path:'liType',component:ListStyleComponent},
   {path:'mapaStyle',component:MarginAndPadingComponent},
+  {path:'border',component:BorderComponent},
+
 
 
   
