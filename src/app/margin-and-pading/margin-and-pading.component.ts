@@ -22,6 +22,9 @@ export class MarginAndPadingComponent implements OnInit {
 
   onFilterChange(val){
     this.isMarginMode=val;
+    this.resultMargin="";
+    this.resultPading="";
+
   }
 
 
@@ -33,8 +36,7 @@ export class MarginAndPadingComponent implements OnInit {
     else
          this.resultPading=`${this.top}px ${this.right}px ${this.bottom}px ${this.left}px`;
 
-         console.log( this.resultMargin)
-         console.log(this.resultPading)
+      
 
 
   }

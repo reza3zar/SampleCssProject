@@ -1,7 +1,7 @@
 
-  <div   > 
+  <div style="background: red;width: 700px;height: 500px;"  > 
         <form class="form"       #form   >
-            <label  >Choose a Color:</label>
+            <br>
             <label style="text-align: center" >margin-top:</label> <input type="text" name="top"    (input)="onChangeTxtShadow()" [(ngModel)]="top" style="width:25%" >
             <br>
             <label  style="text-align: center"> margin-right:</label> <input type="text" name="right"      (input)="onChangeTxtShadow()" [(ngModel)]="right" style="width:25%" >
@@ -9,11 +9,17 @@
             <label  style="text-align: center"> margin-bottom:</label> <input type="text" name="bottom"          (input)="onChangeTxtShadow()" [(ngModel)]="bottom" style="width:25%" >
             <br>
             <label  style="text-align: center"> margin-left:</label> <input type="text" name="left"          (input)="onChangeTxtShadow()" [(ngModel)]="left" style="width:25%" >
+            <br>
+            <br>
+
+            <label  style="text-align: center"> isMargin (not equal padding)</label>
             <label class="switch "  >
                     <input type="checkbox"  name="isMarginMode"  [(ngModel)]="isMarginMode" (ngModelChange)="onFilterChange($event)">
                     <span class="slider"></span>
                   </label>
-            <div [ngStyle]="{'margin': resultMargin,'pading':resultPading}"> 
+            <br>
+
+            <div style="background: lightblue" [ngStyle]="{'margin': resultMargin,'padding':resultPading}"> 
                 <h1>This is  first Line</h1>
                 <h1>This is  Second Line</h1>
 
