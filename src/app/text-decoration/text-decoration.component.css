@@ -1,0 +1,8 @@
+.shad{
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 10px;
+    margin:0px auto;
+    text-align: center !important;
+}

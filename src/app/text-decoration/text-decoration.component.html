@@ -1,0 +1,78 @@
+<div    > 
+        <form class="form"        >
+            <label  >Choose a text decoration :</label>
+            <select   (change)="onChange($event.target.value)">
+              <option value="none">none</option>
+              <option value="overline">overline</option>
+              <option value="line-through">line-through</option>
+              <option value="underline">underline</option>
+              <option value="underline overline">underline overline</option>
+            </select>
+
+
+            <label  >Choose a text-decoration-style :</label>
+            <select   (change)="onChangeTextDecorationStyle($event.target.value)">
+              <option value="none">none</option>
+              <option value="solid">solid</option>
+              <option value="wavy">wavy</option>
+              <option value="double">double</option>
+            </select>
+
+
+            
+            <label  >Choose a text transform :</label>
+            <select   (change)="onChangetxtTransform($event.target.value)">
+                    <option value="uppercase">uppercase</option>
+                    <option value="lowercase">lowercase</option>
+                    <option value="capitalize">capitalize</option>
+            </select>
+
+            <label  >Choose a text Align :</label>
+            <select   (change)="onChangeTxtAlign($event.target.value)">
+                    <option value="center">center</option>
+                    <option value="left">left</option>
+                    <option value="right">right</option>
+                    <option value=" justify"> justify</option>
+
+            </select>
+
+<br>
+            <label  > text indent (you can use negative Value):</label>
+            <input type="text" name="valIndent" (input)="onChangeTxtIndent(null)"  [(ngModel)]="valIndent" >
+            <select   (change)="onChangeTxtIndent($event.target.value)">
+                    <option value="px">px</option>
+                    <option value="em">em</option>
+                    <option value="%">%</option>
+            </select>
+
+            <label  > text Letter spacing (you can use negative Value):</label>
+            <input type="text" name="valLetterSpace"    [(ngModel)]="valLetterSpace" >
+
+            <label  > text Word spacing (you can use negative Value):</label>
+            <input type="text" name="valWordSpace"    [(ngModel)]="valWordSpace" >
+
+            <h1    [ngStyle]="{'text-decoration': txtDecoration,'text-transform': txtTransform,'text-align':txtAlign,
+            'text-indent':valResult,'text-decoration-style':txtDecStyle,'letter-spacing':valLetterSpace +'px'
+            ,'word-spacing':valWordSpace +'px','text-shadow': txtShadow}">This is heading 1</h1>
+
+            <div class="shad" style="border: 2px black">
+                    <label  > text Shadow </label>
+                    <br>
+                    <label style="text-align: center" >horizontal Shadow (you can use negative Value):</label> <input type="text" name="horizontalShadow"    (input)="onChangeTxtShadow()" [(ngModel)]="horizontalShadow" style="width:25%" >
+                    <br>
+                    <label  style="text-align: center"> vertical Shadow (you can use negative Value):</label> <input type="text" name="verticalShadow"      (input)="onChangeTxtShadow()" [(ngModel)]="verticalShadow" style="width:25%" >
+                    <br>
+                    <label  style="text-align: center"> blur Effect (you can use negative Value):</label> <input type="text" name="blurEffect"          (input)="onChangeTxtShadow()" [(ngModel)]="blurEffect" style="width:25%" >
+                    <br>
+                    <label for="cars">Choose a Color:</label>
+                    <select   (change)="onChangeColor($event.target.value)">
+                      <option value="black">black</option>
+                      <option value="red">red</option>
+                      <option value="blue">blue</option>
+                      <option value="green">green</option>
+                    </select>
+            </div>
+
+          
+        </form>
+</div>

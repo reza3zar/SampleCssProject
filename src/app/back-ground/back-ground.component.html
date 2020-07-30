@@ -1,0 +1,26 @@
+
+<div [ngStyle]="{'background': selectedColor}"  > 
+<form class="form" [ngClass]="{'hasBack': filter,'withoutBack':!filter}"     #form   >
+    <label for="cars">Choose a Color:</label>
+    <select   (change)="onChange($event.target.value)">
+      <option value="red">red</option>
+      <option value="blue">blue</option>
+      <option value="black">black</option>
+    </select>
+
+
+
+    <label class="myLabel" style="color: black"> Use image</label>
+    <label class="switch "  >
+        <input type="checkbox"  name="filter"  [(ngModel)]="filter" (ngModelChange)="onFilterChange($event)">
+        <span class="slider"></span>
+      </label>
+
+      <select   *ngIf="filter"   (change)="onChangeBGMode($event.target.value)">
+        <option value="repeat">repeat</option>
+        <option value="repeat-x">repeat-x</option>
+        <option value="repeat-y">repeat-y</option>
+      </select>
+      <br><br>
+  </form>
+</div>

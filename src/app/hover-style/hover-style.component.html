@@ -1,0 +1,13 @@
+
+  <div   > 
+        <form class="form"       #form   >
+            <label  >Choose a hover Color:</label>
+            <select   (change)="onChange($event.target.value)">
+              <option value="red">red</option>
+              <option value="blue">blue</option>
+              <option value="black">black</option>
+            </select>
+
+            <h1 (mouseover)="hover=true" (mouseout)="hover=false" [ngStyle]="{backgroundColor: hover==true  ? hoverColor : 'transparent' }"  > This is First Heading</h1>
+</form>
+</div>           

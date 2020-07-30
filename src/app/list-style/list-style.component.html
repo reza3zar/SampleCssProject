@@ -1,0 +1,23 @@
+
+
+      
+  <div   > 
+        <form class="form"       #form   >
+            <label  >Choose a list-style-type:</label>
+            <select   (change)="onChange($event.target.value)">
+              <option value="none">none</option>
+              <option value="circle">circle</option>
+              <option value="square">square</option>
+              <option value="upper-roman">upper-roman</option>
+              <option value="lower-alpha">lower-alpha</option>
+
+            </select>
+
+
+            <ul [ngStyle]="{'list-style-type': listType}" class="a">
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Coca Cola</li>
+            </ul>
+</form>
+</div>      

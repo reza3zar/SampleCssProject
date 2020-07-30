@@ -1,0 +1,23 @@
+
+<!-- <div   > 
+        <form class="form"       #form   >
+            <label  >Choose a Color:</label>
+            <select   (change)="onChange($event.target.value)">
+              <option value="red">red</option>
+              <option value="blue">blue</option>
+              <option value="black">black</option>
+            </select>
+</form>
+</div>           -->
+
+<div   > 
+        <form class="form"     >
+            <label  >Choose a Font variant Mode:</label>
+            <select   (change)="onChange($event.target.value)">
+              <option value="normal">normal</option>
+              <option value="small-caps">small-caps</option>
+            </select>
+
+            <h1 [ngStyle]="{'font-variant': fntVariant}" >This Is First Heading</h1>
+</form>
+</div>          
