@@ -23,14 +23,12 @@ export class BorderComponent implements OnInit {
     this.top=val;
 
     this.mixParse=`${this.top} ${this.left} ${this.bottom} ${this.right}`;
-    console.log(this.mixParse)
   }
 
   left="none";
   onChangeLeft(val){
     this.left=val;
     this.mixParse=`${this.top} ${this.left} ${this.bottom} ${this.right}`
-    console.log(this.mixParse)
 
   }
 
@@ -38,7 +36,6 @@ export class BorderComponent implements OnInit {
   onChangeBottom(val){
     this.bottom=val;
     this.mixParse=`${this.top} ${this.left} ${this.bottom} ${this.right}`
-    console.log(this.mixParse)
 
   }
 
@@ -46,7 +43,12 @@ export class BorderComponent implements OnInit {
   onChangeRight(val){
     this.right=val;
     this.mixParse=`${this.top} ${this.left} ${this.bottom} ${this.right}`
-    console.log(this.mixParse)
 
+  }
+
+ 
+  onChangeColor(val){
+     
+    this.mixParse=`${this.top} ${this.left} ${this.bottom} ${this.right} ${val}`
   }
 }
