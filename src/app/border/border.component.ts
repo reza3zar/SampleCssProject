@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-border',
   templateUrl: './border.component.html',
   styleUrls: ['./border.component.css']
 })
-export class BorderComponent implements OnInit {
+export class BorderComponent implements OnInit,AfterViewInit  {
+  ngAfterViewInit(): void {
+    this.borderResult=`${this.Thickness}px ${this.brMode} ${this.color} `;
+  }
 
   constructor() { }
 
@@ -14,6 +17,8 @@ export class BorderComponent implements OnInit {
   brStyle="none";
   onChange(val){
     this.brStyle=val;
+
+
   }
 
   mixParse="";
@@ -45,10 +50,31 @@ export class BorderComponent implements OnInit {
     this.mixParse=`${this.top} ${this.left} ${this.bottom} ${this.right}`
 
   }
+  bordreRadious="";
+  Thickness="2";
+  borderResult="";
+  brMode="solid";
+  color="red";
+  borderRadious="33";
+
+
+  onChangeThickness(){
+    this.borderResult=`${this.Thickness}px ${this.brMode} ${this.color} `;
+  }
+  onChangeStyle(val){
+    this.brMode=val;
+    this.borderResult=`${this.Thickness}px ${this.brMode} ${this.color} `;
+  }
 
  
   onChangeColor(val){
-     
-    this.mixParse=`${this.top} ${this.left} ${this.bottom} ${this.right} ${val}`
+     this.color=val;
+    this.borderResult=`${this.Thickness}px ${this.brMode} ${this.color} `;
+
+  }
+
+  onChangeBordreRadious(){
+    this.borderResult=`${this.Thickness}px ${this.brMode} ${this.color} `;
+
   }
 }

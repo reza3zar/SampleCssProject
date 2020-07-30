@@ -87,5 +87,40 @@
 
 
             <h1 [ngStyle]="{'border-style': mixParse}">This is Mix Sample</h1>
+
+            <label >Border radious</label>
+            <br>
+            <label >Thickness</label>
+            <input type="text" name="Thickness" (input)="onChangeThickness()"  [(ngModel)]="Thickness" >
+
+            <label >Border-radious</label>
+            <input type="text" name="bordreRadious" (input)="onChangeBordreRadious()"  [(ngModel)]="borderRadious" >
+            
+            <label  >Choose a border-style right:</label>
+            <select   (change)="onChangeStyle($event.target.value)">
+              <option value="solid">solid</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="inset">inset</option>
+              <option value="outset">outset</option>
+              <option value="hidden">hidden</option>
+              <option value="none">none</option>
+
+            </select>
+
+
+            <label  >Choose a Color:</label>
+            <select   (change)="onChangeColor($event.target.value)">
+              <option value="red">red</option>
+              <option value="blue">blue</option>
+              <option value="black">black</option>
+            </select>
+
+
+            <h1 [ngStyle]="{'border': borderResult,'border-radius':borderRadious +'px'}">This is a sample of Border-radious</h1>
+
 </form>
 </div>       
