@@ -1,0 +1,51 @@
+<div style="background: lightgoldenrodyellow;width: 100%;  height: 600px">
+
+
+ <div   > 
+        <form class="form"       >
+            <label  >Choose a width as percent:</label>
+            <select   (change)="onChangeWidth($event.target.value)">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+              <option value="60">60</option>
+              <option selected value="70">70</option>
+              <option value="80">80</option>
+              <option value="90">90</option>
+              <option value="100">100</option>
+            </select>
+
+
+            <!-- <label  >Choose a width as percent:</label>
+            <select   (change)="onChangeHeight($event.target.value)">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+              <option value="60">60</option>
+              <option value="70">70</option>
+              <option value="80">80</option>
+              <option value="90">90</option>
+              <option value="100">100</option>
+            </select> -->
+</form>
+</div>          
+<!--  'height':heightPercent + '%' -->
+    <div class="card" [ngStyle]="{'width': widthPercent + '%'}">
+ <p>
+        By default the layout fills up the whole view-port. The window scrollbars are disabled on the body and moved inside of the nb-layout, so that the scrollbars won't mess with the fixed nb-header.
+
+        The child components are projected into a flexible layout structure allowing to adjust the layout behavior based on the settings provided.
+        
+        The layout content (columns) becomes centered when the window width is more than the value specified in the theme variable layout-content-width.
+        
+        The layout also contains the area on the very top (the first child of the nb-layout), which could be used to dynamically append some components like modals or spinners/loaders so that they are located on top of the elements hierarchy. More details are under the ThemeService section.
+        
+        The layout component is also responsible for changing application themes. It listens to the themeChange event and change a theme CSS class appended to body. Based on the class appended, specific CSS-theme is applied to the application. More details of the Theme System could be found here Enabling Theme System
+ </p>
+    </div>
+
+</div>

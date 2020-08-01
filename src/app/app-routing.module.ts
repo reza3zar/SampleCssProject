@@ -8,6 +8,9 @@ import { HoverStyleComponent } from './hover-style/hover-style.component';
 import { ListStyleComponent } from './list-style/list-style.component';
 import { MarginAndPadingComponent } from './margin-and-pading/margin-and-pading.component';
 import { BorderComponent } from './border/border.component';
+import { MinAndMaxWidthAndHeightComponent } from './min-and-max-width-and-height/min-and-max-width-and-height.component';
+import { DisplayComponent } from './display/display.component';
+import { FixDisplayComponent } from './fix-display/fix-display.component';
 
 
 const routes: Routes = [  
@@ -19,10 +22,9 @@ const routes: Routes = [
   {path:'liType',component:ListStyleComponent},
   {path:'mapaStyle',component:MarginAndPadingComponent},
   {path:'border',component:BorderComponent},
-
-
-
-  
+  {path:'minAndMaxWidthHeight',component:MinAndMaxWidthAndHeightComponent},
+  {path:'display',component:DisplayComponent},
+  {path:'fix',component:FixDisplayComponent},
 ];
 
 @NgModule({

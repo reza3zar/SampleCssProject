@@ -14,6 +14,9 @@ import { HoverStyleComponent } from './hover-style/hover-style.component';
 import { ListStyleComponent } from './list-style/list-style.component';
 import { MarginAndPadingComponent } from './margin-and-pading/margin-and-pading.component';
 import { BorderComponent } from './border/border.component';
+import { MinAndMaxWidthAndHeightComponent } from './min-and-max-width-and-height/min-and-max-width-and-height.component';
+import { DisplayComponent } from './display/display.component';
+import { FixDisplayComponent } from './fix-display/fix-display.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { BorderComponent } from './border/border.component';
     HoverStyleComponent,
     ListStyleComponent,
     MarginAndPadingComponent,
-    BorderComponent
+    BorderComponent,
+    MinAndMaxWidthAndHeightComponent,
+    DisplayComponent,
+    FixDisplayComponent
   ],
   imports: [
     BrowserModule,

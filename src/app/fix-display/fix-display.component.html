@@ -1,0 +1,40 @@
+<div style="position: fixed;">
+        <img style="width: 80%;top :10px;left :0" src="../../assets/index.jfif">
+    </div>
+<div style="background: lightgoldenrodyellow;width: 70%;  height: 1600px; margin: 40px auto; border: 2px solid black" >
+       
+        <form class="form"       >
+                <label  >Choose a position Mode:</label>
+                <select   (change)="onChange($event.target.value)">
+                  <option value="relative">relative</option>
+                  <option value="static">static</option>
+                  <option value="fixed">fixed</option>
+                  <option value="sticky">sticky</option>
+                  <option value="absolute">absolute</option>
+
+                  
+                </select>
+    
+    
+
+    </form>
+
+ 
+<div class="relative" style="margin: 20px auto">This div element has position: relative;
+
+
+        <div [ngStyle]="{'position': positionMode}" class="absolute">This div element has position: <b> {{positionMode}}</b> ;
+             
+            <br>
+            top: 80px;
+            <br>
+            right: 0;
+          
+        </div>
+      </div>
+
+</div>  
+
+
+
+ 
