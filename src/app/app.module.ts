@@ -17,6 +17,10 @@ import { BorderComponent } from './border/border.component';
 import { MinAndMaxWidthAndHeightComponent } from './min-and-max-width-and-height/min-and-max-width-and-height.component';
 import { DisplayComponent } from './display/display.component';
 import { FixDisplayComponent } from './fix-display/fix-display.component';
+import { FloatComponent } from './float/float.component';
+import { MouseEventComponent } from './mouse-event/mouse-event.component';
+import { PseudoElementComponent } from './pseudo-element/pseudo-element.component';
+import { CssSelectorComponent } from './css-selector/css-selector.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { FixDisplayComponent } from './fix-display/fix-display.component';
     BorderComponent,
     MinAndMaxWidthAndHeightComponent,
     DisplayComponent,
-    FixDisplayComponent
+    FixDisplayComponent,
+    FloatComponent,
+    MouseEventComponent,
+    PseudoElementComponent,
+    CssSelectorComponent
   ],
   imports: [
     BrowserModule,

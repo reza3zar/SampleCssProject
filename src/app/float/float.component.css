@@ -1,0 +1,45 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    /* position: absolute;
+    bottom: 0px;
+    right: 0px; */
+    order:-99999;
+    width: 100%;
+  }
+  
+  
+  li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 11px 11px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: red;
+  }
+
+  .myImg{
+      width: 25%;
+      display:inline-block;
+      padding: 15px;
+  } 
+
+  .content{
+      width: 100%;
+      display:table;
+
+  }
+  .myText{
+     text-align: justify;
+      display:inline-block;
+  }

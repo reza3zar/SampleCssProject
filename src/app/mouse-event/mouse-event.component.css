@@ -1,0 +1,41 @@
+a.highlight:hover {
+    color: #ff0000;
+    font-size: larger;
+    text-decoration: none;
+   
+  }
+
+ 
+  
+  div:hover p {
+    display: block;
+  }
+
+  .myImage{
+    display: none;
+
+  }
+
+  .showImage:hover .myImage{
+    display: block;
+
+  }
+
+  /* .showToolTip:hover .myToolTip{
+    display: inline;
+  } */
+
+ 
+ 
+
+
+
+  /* p {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+  }
+  
+  div:hover p {
+    display: block;
+  } */

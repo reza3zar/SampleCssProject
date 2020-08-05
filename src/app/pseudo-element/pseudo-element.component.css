@@ -1,0 +1,44 @@
+p{
+    padding: 6px;
+    text-align: justify;
+}
+
+p::selection{
+    background-color: brown;
+}
+
+p.firstLineSample::first-line{
+    font-style: italic;
+    font-size: larger;
+    color: blueviolet;
+}
+
+p.firstLineLetter::first-letter{
+    text-transform: capitalize;
+    color: blue;
+    font-weight: bolder;
+}
+
+p.secondLineSample::before{
+    content: url(../../assets/ic.jfif);
+    width: 2%;
+    display: flex;
+    float: left;
+    padding-right: 10px;
+
+}
+
+p.secondLineSample::after{
+    content: url(../../assets/finish.jfif);
+    width: 2%;
+    display: flex;
+    float: right;
+    padding-right: 10px;
+
+}
+
+
+.secondLineSample{
+    width: 92%;
+    display: flex;
+}
