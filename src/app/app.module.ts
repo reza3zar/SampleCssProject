@@ -21,6 +21,8 @@ import { FloatComponent } from './float/float.component';
 import { MouseEventComponent } from './mouse-event/mouse-event.component';
 import { PseudoElementComponent } from './pseudo-element/pseudo-element.component';
 import { CssSelectorComponent } from './css-selector/css-selector.component';
+import { CommodityTreeComponent } from './commodity-tree/commodity-tree.component';
+import { CommodityNodeItemComponent } from './commodity-node-item/commodity-node-item.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { CssSelectorComponent } from './css-selector/css-selector.component';
     FloatComponent,
     MouseEventComponent,
     PseudoElementComponent,
-    CssSelectorComponent
+    CssSelectorComponent,
+    CommodityTreeComponent,
+    CommodityNodeItemComponent
   ],
   imports: [
     BrowserModule,

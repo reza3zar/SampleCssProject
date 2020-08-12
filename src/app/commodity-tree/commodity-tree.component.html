@@ -1,0 +1,59 @@
+
+<body>
+<div class=" ">
+    <!-- <div style="display:inline-block">
+<div class="folder-tree-wrapper">
+    <ul class="folder-tree  ">
+                      <li [ngClass]="{'expanded': isOpenNode}"><i class="fa fa-folder"    ></i> صنعتی
+                          <div class="arrow"><img (click)="toggleMe()" *ngIf="!isOpenNode" src="../../assets/plus.png"> <img (click)="toggleMe()" *ngIf="isOpenNode" src="../../assets/minus.png"> </div>
+                          
+                          <ul>
+                              <li><i class="fa fa-folder"></i> New Folder (0)</li>
+                              <li><i class="fa fa-folder"></i> New Folder (1)
+                                  <div class="arrow"><i class="fa fa-plus"></i></div>
+                                  <ul>
+                                  
+                                      <li><i class="fa fa-folder"></i> New Folder (2)</li>
+                                      <li><i class="fa fa-folder"></i> folder</li>
+                                  
+                                  </ul>
+                              
+                              </li>
+                          </ul>
+                          
+                      </li>
+                      <li><i class="fa fa-folder"></i> کشاورزی</li>
+                      <li><i class="fa fa-folder"></i> پتروشیمی و فرآورده‌های نفتی</li>
+                      <li><i class="fa fa-folder"></i> معدنی</li>
+                      <li><i class="fa fa-folder"></i> اموال غیرمنقول</li>
+                      <li><i class="fa fa-folder"></i> بازار فرعی</li>
+                    
+
+                  </ul>
+  </div>
+</div> -->
+
+<div style="display:inline-block;padding: 20px;">
+    <div class="folder-tree-wrapper">
+        <ul class="folder-tree  ">
+                          <li [ngClass]="{'expanded': isOpenNode && selectedCommodityNode.id==commodityNode.id }" *ngFor="let commodityNode of parentCollection"><i class="fa fa-folder"    ></i> {{commodityNode.name}}  
+                              <div class="arrow">
+                                  <img id="plus{{commodityNode.id}}"  (click)="toggleMe(commodityNode)" *ngIf="!isOpenNode && selectedCommodityNode.id==commodityNode.id || !isCleckied " src="../../assets/plus.png"> 
+                                  <img id="plus{{commodityNode.id}}"  (click)="toggleMe(commodityNode)" *ngIf="selectedCommodityNode.id!==commodityNode.id && isCleckied  " src="../../assets/plus.png"> 
+                                  <img id="minus{{commodityNode.id}}" (click)="toggleMe(commodityNode)" *ngIf="isOpenNode  && selectedCommodityNode.id==commodityNode.id  " src="../../assets/minus.png"> 
+                              </div>
+
+                              <app-commodity-node-item *ngIf="selectedCommodityNode.id==commodityNode.id && isOpenNode" 
+                              [commoditiesCollection]="commoditiesCollection" [collection]="helperCollection" ></app-commodity-node-item>
+                          </li>
+                      </ul>
+      </div>
+</div>
+
+
+
+
+  
+</div>
+
+</body>

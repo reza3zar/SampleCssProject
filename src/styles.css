@@ -87,3 +87,16 @@ select {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  @font-face { font-family: 'IRANSans';
+    src: url('assets/fonts/IRANSansWeb.eot?#') format('eot'),  /* IE6–۸ */
+    url('assets/fonts/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('assets/fonts/IRANSansWeb.ttf') format('truetype');  /* Saf3—۵, Chrome4+, FF3.5, Opera 10+ */
+  }
+
+  .myOrginalFont{
+    font-family: 'IRANSans';
+}
+*{
+  font-family: 'IRANSans';
+}

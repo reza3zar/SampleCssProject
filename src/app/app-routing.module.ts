@@ -15,6 +15,7 @@ import { FloatComponent } from './float/float.component';
 import { MouseEventComponent } from './mouse-event/mouse-event.component';
 import { PseudoElementComponent } from './pseudo-element/pseudo-element.component';
 import { CssSelectorComponent } from './css-selector/css-selector.component';
+import { CommodityTreeComponent } from './commodity-tree/commodity-tree.component';
 
 
 const routes: Routes = [  
@@ -33,6 +34,8 @@ const routes: Routes = [
   {path:'mouseEvent',component:MouseEventComponent},
   {path:'PseudoElement',component:PseudoElementComponent},
   {path:'cssSelectore',component:CssSelectorComponent},
+  {path:'commodityTree',component:CommodityTreeComponent},
+
 
   
 ];

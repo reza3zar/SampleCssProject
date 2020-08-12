@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; outline: none; box-sizing: border-box; }
+.folder-tree-wrapper { background-color: #fff; width: 220px; min-height: 260px;   margin: 0px auto; border-radius: 3px; box-shadow: 1px 1px 1px 0 rgba(0,0,0,.11); }
+.folder-tree { list-style: none; cursor: pointer; padding-right: 20px;direction: rtl; }
+.folder-tree li { margin-bottom: 10px; font-size: 14px; transition: all .4s ease; position: relative; }
+.folder-tree li:hover {  }
+.folder-tree li i { color: rgb(242, 176, 53); }
+.folder-tree li ul { padding-right: 10px; padding-top: 8px; }
+.folder-tree ul { display: none; position: relative; }
+.folder-tree ul:before { position: absolute; content: ''; right: -10px; top: 0; width: 2px; height: 100%; background-color: transparent; border-right: dashed 1px #c2c2c2; border-bottom: dashed 1px #c2c2c2; }
+.folder-tree li ul li { display: block; margin-bottom: 8px; }
+.folder-tree .arrow { position: absolute; top: 1px;
+    right: -18px; width: 8px; height: 1px; transition: all .4s ease; }
+.folder-tree .arrow i { color: #595959; transition: all .4s ease; }
+.folder-tree .arrow:hover i { color: #292929; }
+.folder-tree li.expanded > ul { display: block; }
+.folder-tree li.expanded > .arrow { --transform: rotate(0deg); }
+
+
+html, body{
+    background: lightgrey;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main{
+    margin: 50px auto;
+}
