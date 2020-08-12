@@ -1,6 +1,6 @@
 <ul>
     <li [ngClass]="{'expanded': isOpenNode }" *ngFor="let commodityNode of collection"> 
-        <div *ngIf="!hasChildren(commodityNode.id)">
+        <div *ngIf="!hasChildren(commodityNode.id)" style="padding-right: 15px;">
             <input   type="checkbox"> {{commodityNode.name}} 
         </div>
         
@@ -14,7 +14,7 @@
 
         </div>
 
-        <app-commodity-node-item   *ngIf="isOpenNode && hasChildren(commodityNode.id)" [commoditiesCollection]="commoditiesCollection" [collection]="helperCollection" ></app-commodity-node-item>
+        <app-commodity-node-item   *ngIf="isOpenNode && hasChildren(commodityNode.id) && selectedCommodityNode.id==commodityNode.id" [commoditiesCollection]="commoditiesCollection" [collection]="helperCollection" ></app-commodity-node-item>
 
         <!-- <div class="arrow">
             <img id="plus{{commodityNode.id}}"  (click)="toggleMe(commodityNode)" *ngIf="!isOpenNode && selectedCommodityNode.id==commodityNode.id || !isCleckied " src="../../assets/plus.png"> 
