@@ -1,7 +1,7 @@
-<ul style="padding-right: 4px;">
+<ul style="padding-right: 7px;">
     <li [ngClass]="{'expanded': isOpenNode }" *ngFor="let commodityNode of collection"> 
         <div *ngIf="!hasChildren(commodityNode.id)" style="padding-right: 15px;">
-            <input   type="checkbox"> {{commodityNode.name}} 
+            <input [checked]="commodityNode.isChecked"  type="checkbox"> {{commodityNode.name}} 
         </div>
         
         
