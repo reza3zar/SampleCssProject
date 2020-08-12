@@ -92,6 +92,13 @@ export class CommodityTreeComponent implements OnInit {
 
    this.commoditiesCollection.push(commodityNodeItem121);
 
+   let commodityNodeItem122=new commodityNode();
+   commodityNodeItem122.id=122;
+   commodityNodeItem122.name="آهن اسفنجی سبک خطی";
+   commodityNodeItem122.parentId=121;
+
+   this.commoditiesCollection.push(commodityNodeItem122);
+
     
    this.parentCollection=this.commoditiesCollection.filter(x=>x.parentId==0) ;
   }
