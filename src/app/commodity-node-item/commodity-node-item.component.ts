@@ -23,8 +23,12 @@ export class CommodityNodeItemComponent implements OnInit {
   }
 
   hasChildren(nodeId){
-    let result= this.collection.filter(x=>x.parentId==nodeId);
-    console.log(result.length)
+    if(!nodeId)
+     return;
+    console.log(nodeId);
+    console.log(this.commoditiesCollection);
+    let result= this.commoditiesCollection.filter(x=>x.parentId==nodeId);
+    console.log(result)
       return result!==null && result.length>0?true:false;
   }
 
@@ -35,7 +39,10 @@ export class CommodityNodeItemComponent implements OnInit {
     this.selectedCommodityNode=node;
     this.isCleckied=true;
 
+  
+
     this.helperCollection=this.commoditiesCollection.filter(x=>x.parentId==node.id);
+    console.log(this.helperCollection)
   }
 
 }
