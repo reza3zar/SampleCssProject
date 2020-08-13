@@ -32,12 +32,15 @@ export class CommodityNodeItemComponent implements OnInit {
   isOpenNode=false;
   isCleckied=false
   toggleMe(node:commodityNode){
-    this.isOpenNode=!this.isOpenNode;
+    if(this.selectedCommodityNode.id==node.id){
+      this.isOpenNode=!this.isOpenNode;
+      console.log('YES')
+    }
+    
     this.selectedCommodityNode=node;
     this.isCleckied=true;
-
-  
-    console.log(  node);
+    if(!this.isOpenNode) 
+      console.log(  node);
     this.helperCollection=this.commoditiesCollection.filter(x=>x.parentId==node.id);
   }
 
