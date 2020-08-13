@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SampleCssProject"
+    }
+  },
+  "defaultProject": "SampleCssProject",
+  "cli": {
+    "analytics": "847b37aa-4125-4b37-af7b-bc820dbf8321"
+  }
 }
