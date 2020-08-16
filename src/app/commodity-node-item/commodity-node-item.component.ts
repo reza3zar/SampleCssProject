@@ -32,12 +32,21 @@ export class CommodityNodeItemComponent implements OnInit {
   isOpenNode=false;
   isCleckied=false
   toggleMe(node:commodityNode){
+<<<<<<< HEAD
+=======
+    if(this.selectedCommodityNode.id==node.id){
+      this.isOpenNode=!this.isOpenNode;
+      console.log('YES')
+    }
+    
+>>>>>>> 0701ae6408c42755369d1ce4a80ea54181db0f8b
     this.selectedCommodityNode=node;
 
     if(node.id==this.selectedCommodityNode.id)
        this.selectedCommodityNode.isOpen=!this.selectedCommodityNode.isOpen;
 
     this.isCleckied=true;
+<<<<<<< HEAD
 
   
     // this.helperCollection=this.commoditiesCollection.filter(x=>x.parentId==node.id);
@@ -57,6 +66,11 @@ export class CommodityNodeItemComponent implements OnInit {
       return result.isOpen;
     return false;
 
+=======
+    if(!this.isOpenNode) 
+      console.log(  node);
+    this.helperCollection=this.commoditiesCollection.filter(x=>x.parentId==node.id);
+>>>>>>> 0701ae6408c42755369d1ce4a80ea54181db0f8b
   }
 
 }
