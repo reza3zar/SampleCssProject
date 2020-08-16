@@ -23,6 +23,7 @@ import { PseudoElementComponent } from './pseudo-element/pseudo-element.componen
 import { CssSelectorComponent } from './css-selector/css-selector.component';
 import { CommodityTreeComponent } from './commodity-tree/commodity-tree.component';
 import { CommodityNodeItemComponent } from './commodity-node-item/commodity-node-item.component';
+import { CommodityTreeNewComponent } from './commodity-tree-new/commodity-tree-new.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CommodityNodeItemComponent } from './commodity-node-item/commodity-node
     PseudoElementComponent,
     CssSelectorComponent,
     CommodityTreeComponent,
-    CommodityNodeItemComponent
+    CommodityNodeItemComponent,
+    CommodityTreeNewComponent
   ],
   imports: [
     BrowserModule,

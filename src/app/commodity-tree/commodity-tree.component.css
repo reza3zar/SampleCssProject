@@ -1,5 +1,5 @@
 * { margin: 0; padding: 0; outline: none; box-sizing: border-box; }
-.folder-tree-wrapper { background-color: #fff; width: 220px; min-height: 260px;   margin: 0px auto; border-radius: 3px; box-shadow: 1px 1px 1px 0 rgba(0,0,0,.11); }
+.folder-tree-wrapper { background-color: #fff; width: 220px; min-height: 260px;   margin: 0px auto;   }
 .folder-tree { list-style: none; cursor: pointer; padding-right: 20px;direction: rtl; }
 .folder-tree li { margin-bottom: 10px; font-size: 14px; transition: all .4s ease; position: relative; }
 .folder-tree li:hover {  }
@@ -17,9 +17,9 @@
 
 
 html, body{
-    background: lightgrey;
+    /* background: lightgrey;
     height: 100vh;
-    width: 100vw;
+    width: 100vw; */
     margin: 0px;
     padding: 0px;
 }

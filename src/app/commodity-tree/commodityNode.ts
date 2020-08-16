@@ -4,6 +4,7 @@ export class commodityNode{
     public name:string;
     public parentId:number;
     public isChecked:boolean=false;
+    public isOpen:boolean=false;
 
 
 }

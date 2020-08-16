@@ -16,6 +16,7 @@ import { MouseEventComponent } from './mouse-event/mouse-event.component';
 import { PseudoElementComponent } from './pseudo-element/pseudo-element.component';
 import { CssSelectorComponent } from './css-selector/css-selector.component';
 import { CommodityTreeComponent } from './commodity-tree/commodity-tree.component';
+import { CommodityTreeNewComponent } from './commodity-tree-new/commodity-tree-new.component';
 
 
 const routes: Routes = [  
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path:'PseudoElement',component:PseudoElementComponent},
   {path:'cssSelectore',component:CssSelectorComponent},
   {path:'commodityTree',component:CommodityTreeComponent},
+  {path:'commodityTreeNew',component:CommodityTreeNewComponent},
 
 
   

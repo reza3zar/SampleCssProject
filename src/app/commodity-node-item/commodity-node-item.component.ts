@@ -19,7 +19,7 @@ export class CommodityNodeItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.selectedCommodityNode=this.collection[0];
+    this.selectedCommodityNode=new commodityNode(); //this.collection[0];
   }
 
   hasChildren(nodeId){
@@ -32,13 +32,31 @@ export class CommodityNodeItemComponent implements OnInit {
   isOpenNode=false;
   isCleckied=false
   toggleMe(node:commodityNode){
-    this.isOpenNode=!this.isOpenNode;
     this.selectedCommodityNode=node;
+
+    if(node.id==this.selectedCommodityNode.id)
+       this.selectedCommodityNode.isOpen=!this.selectedCommodityNode.isOpen;
+
     this.isCleckied=true;
 
   
-    console.log(  node);
-    this.helperCollection=this.commoditiesCollection.filter(x=>x.parentId==node.id);
+    // this.helperCollection=this.commoditiesCollection.filter(x=>x.parentId==node.id);
+  }
+
+  validToOpenCollection(){
+    return this.commoditiesCollection.filter(x=>x.isOpen==true);
+   }
+ 
+   fillHelperCollection(id){
+    return  this.commoditiesCollection.filter(x=>x.parentId==id);
+   }
+
+  nodeShouldBeOpen(nodeId){
+    let result=this.commoditiesCollection.find(x=>x.id==nodeId);
+    if(result)
+      return result.isOpen;
+    return false;
+
   }
 
 }

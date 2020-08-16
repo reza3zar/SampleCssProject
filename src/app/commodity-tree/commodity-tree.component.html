@@ -33,7 +33,7 @@
   </div>
 </div> -->
 
-<div style="display:inline-block;padding: 20px;">
+<!-- <div style="display:inline-block;padding: 20px;">
     <div class="folder-tree-wrapper">
         <ul class="folder-tree  ">
                           <li [ngClass]="{'expanded': isOpenNode && selectedCommodityNode.id==commodityNode.id }" *ngFor="let commodityNode of parentCollection"><i class="fa fa-folder"    ></i> {{commodityNode.name}}  
@@ -48,11 +48,32 @@
                           </li>
                       </ul>
       </div>
+</div> -->
+
+<div style="display:inline-block;padding: 20px;">
+    <div class="folder-tree-wrapper">
+        <ul class="folder-tree  ">
+                          <li   *ngFor="let commodityNode of parentCollection"><i class="fa fa-folder"    ></i> {{commodityNode.name}}  
+                              <div class="arrow">
+                                  <img id="plus{{commodityNode.id}}"  (click)="toggleMe(commodityNode)" *ngIf="  !nodeShouldBeOpen(commodityNode.id) || !isCleckied " src="../../assets/plus.png"> 
+                                  <!-- <img id="plus{{commodityNode.id}}"  (click)="toggleMe(commodityNode)" *ngIf="selectedCommodityNode.id!==commodityNode.id && isCleckied  " src="../../assets/plus.png">  -->
+                                  <img id="minus{{commodityNode.id}}" (click)="toggleMe(commodityNode)" *ngIf=" nodeShouldBeOpen(commodityNode.id)  " src="../../assets/minus.png"> 
+                              </div>
+
+                              <!-- <app-commodity-node-item *ngIf="selectedCommodityNode?.id==commodityNode.id && selectedCommodityNode?.isOpen" 
+                              [commoditiesCollection]="commoditiesCollection" [collection]="helperCollection" ></app-commodity-node-item> -->
+
+                              <div *ngFor="let item of validToOpenCollection()">
+                                <app-commodity-node-item *ngIf="item?.id==commodityNode.id && item.isOpen" 
+                                [commoditiesCollection]="commoditiesCollection" [collection]="fillHelperCollection(item?.id)" ></app-commodity-node-item>
+                             </div>
+                    
+                          </li>
+          </ul>
+      </div>
 </div>
 
-
-
-
+ 
   
 </div>
 
